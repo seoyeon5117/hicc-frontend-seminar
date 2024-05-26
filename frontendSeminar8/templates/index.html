@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>게시판</title>
+     {% load static %}
+    <!-- 파일 연결하는 것도 해보는게 어떨까 -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">  
+    <script src="{% static 'js/scripts.js' %}" defer></script>
+</head>
+<body>
+    <h1>게시판</h1>
+    <button id="new-post-button">새 글 쓰기</button>
+    <ul id="post-list">
+        <!-- 게시글 목록이 여기에 추가 -->
+    </ul>
+
+    <!-- 아래 html 짜보는것 -->
+    <!-- 글 작성 폼 -->
+    <div id="post-form" style="display:none;"> 
+        <!-- 초기 로드를 숨기기 위함 -->
+        <h2>글 작성</h2>
+        <form id="new-post-form" method="POST">
+            <p>제목:</p>
+            <input type="text" id="title" name="title"><br>
+            <p>내용:</p>
+            <textarea id="content" name="content"></textarea><br>
+            <button type="button" id="save-button">저장</button>
+            <button type="button" id="cancel-button">취소</button>
+        </form>
+    </div>
+</body>
+</html>
